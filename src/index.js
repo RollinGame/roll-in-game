@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
+import './styles/main.scss';
 
 ReactDOM.render(
-    <div>Hello World!</div>,
+    <div class="u-center-text">Hello World!</div>,
   document.getElementById('root')
 );
 

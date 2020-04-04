@@ -1,3 +1,10 @@
+## Good Practices
+
+### CSS
+
+- Use BEM structure
+  http://getbem.com/introduction/
+
 ## Available Scripts
 
 In the project directory, you can run:

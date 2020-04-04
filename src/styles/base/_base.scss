@@ -3,6 +3,7 @@
 }
 
 html {
+	// this defines what 1 rem is
 	font-size: 62.5%;
 }
 
@@ -15,10 +16,10 @@ body {
 
 button {
 	cursor: pointer;
-}
 
-button:disabled {
-	cursor: default;
+	&:disabled {
+		cursor: default;
+	}
 }
 
 .is-active {
