@@ -1,0 +1,28 @@
+.container__carousel {
+	height: 100vh;
+	position: relative;
+	background-image: url('../../images/Rollinbet-blue-bcgkr-2.png');
+	background-size: cover;
+
+	@include respond(phone) {
+		background-position: center;
+	}
+	@include respond(tab-land) {
+		background-position: center;
+	}
+
+	svg {
+		display: block;
+		position: absolute;
+		bottom: 0;
+	}
+
+	// .wave {
+	// 	position: absolute;
+	// 	bottom: 0;
+	// 	background-color: orange;
+	// 	svg {
+	// 		display: block;
+	// 	}
+	// }
+}
