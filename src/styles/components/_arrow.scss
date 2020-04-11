@@ -6,6 +6,7 @@
 	border-color: $white;
 	height: 1.6rem;
 	width: 1.6rem;
+	z-index: 1000;
 
 	cursor: pointer;
 	transition: transform ease-in 0.1s;
@@ -17,13 +18,4 @@
 		left: 4.5rem;
 		transform: rotate(135deg);
 	}
-	// &:hover {
-	// 	transform: scale(1.1);
-	// }
-	// img {
-	// 	transform: translateX(${direction === 'left' ? '-2': '2'}px);
-	// 	&:focus {
-	// 		outline: 0;
-	// 	}
-	// }
 }

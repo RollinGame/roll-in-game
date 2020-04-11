@@ -2,20 +2,20 @@ import React from 'react';
 import PlayersIMG from '../images/player.svg';
 import StarIMG from '../images/star.svg';
 
-const GameDescription = ({betSize, maxPlayers, players, playersOnline}) => {
+const GameDescription = ({game}) => {
 
 
   return (
     <div class="game-description">
       <h4 class="game-description__trending-text">Trending Now</h4>
-      <h1 class="game-description__title">Rollin Wheel</h1>
+      <h1 class="game-description__title">{game.gameTitle}</h1>
       <div class="game-description__specs">
         <div>
-          <p>Min Bet: {betSize}</p>
+          <p>Min Bet: {game.minBet}</p>
         </div>
         <div class="game-description__divider"><p>|</p></div>
         <div>
-          <p>MAX Players: {maxPlayers}</p>
+          <p>MAX Players: {game.maxPlayers}</p>
         </div>
       </div>
       <div class="game-description__text">
@@ -29,23 +29,16 @@ const GameDescription = ({betSize, maxPlayers, players, playersOnline}) => {
       <div class="game-description__player-stats">
           <div>
             <span class="game-description__player-stats--img"><img src={PlayersIMG}></img></span>
-            Players: {players}
+            Players: {game.players}
           </div>
         <div>
           <span class="game-description__player-stats--img"><img src={StarIMG}></img></span>
-          Online: {playersOnline}
+          Online: {game.playersOnline}
         </div>
       </div>        
       
     </div>
   )
-}
-
-GameDescription.defaultProps = {
-  betSize: '0.42ETH',
-  maxPlayers: 6,
-  players: 1324,
-  playersOnline: 489
 }
 
 export default GameDescription;
