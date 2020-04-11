@@ -1,0 +1,21 @@
+.arrow {
+	position: absolute;
+	top: 50%;
+	border-right: 0.3rem solid;
+	border-bottom: 0.3rem solid;
+	border-color: $white;
+	height: 1.6rem;
+	width: 1.6rem;
+	z-index: 1000;
+
+	cursor: pointer;
+	transition: transform ease-in 0.1s;
+	&--right {
+		right: 4.5rem;
+		transform: rotate(-45deg);
+	}
+	&--left {
+		left: 4.5rem;
+		transform: rotate(135deg);
+	}
+}

@@ -1,0 +1,29 @@
+.btn {
+	border-radius: 1.8rem;
+	height: 4rem;
+
+	&__play {
+		width: 17.7rem;
+		font-family: GothamPro;
+		text-align: left;
+		text-indent: 8%;
+		font-size: 1.7rem;
+		font-weight: 500;
+		line-height: 3.9rem;
+		letter-spacing: 0.51px;
+		color: #0456a3;
+		position: relative;
+		background-image: linear-gradient(to right, #8dc42d -29%, #d2fa5f);
+
+		&--arrow {
+			position: absolute;
+			top: 35%;
+			right: 12%;
+			border-right: 0.2rem solid;
+			border-bottom: 0.2rem solid;
+			height: 1.2rem;
+			width: 1.2rem;
+			transform: rotate(-45deg);
+		}
+	}
+}

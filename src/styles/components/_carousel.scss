@@ -1,0 +1,24 @@
+.container__carousel {
+	height: 100vh;
+	position: relative;
+	background-size: cover;
+	overflow: hidden;
+
+	@include respond(phone) {
+		background-position: center;
+	}
+	@include respond(tab-land) {
+		background-position: center;
+	}
+
+	.slide-content {
+		height: 70vh !important;
+		background-size: cover !important;
+	}
+}
+
+.wave {
+	display: block;
+	position: absolute;
+	bottom: 0;
+}
