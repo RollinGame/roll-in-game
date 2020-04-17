@@ -1,0 +1,86 @@
+.section__container {
+	height: 100vh;
+	position: relative;
+
+	.last-games__wrapper {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.last-games__info {
+	width: 50rem;
+	height: 45rem;
+}
+
+.last-games__container {
+	width: 80rem;
+	height: 45rem;
+	box-shadow: 0 1rem 8rem 0 rgba(0, 0, 0, 0.06);
+	border-radius: 5rem;
+	background-color: $white;
+	display: flex;
+}
+
+.last-games__avatars {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 20%;
+
+	div {
+		flex: 1;
+		cursor: pointer;
+		width: 100%;
+		display: flex;
+		background-color: #f3f3f3;
+		transition: all 0.5s;
+		&:nth-of-type(1) {
+			&.selected {
+				background-color: $white;
+				border-radius: 5rem 0 0 0;
+			}
+			&.selected-dice {
+				border-radius: 5rem 0 5rem 0 !important;
+			}
+			&.selected-cards {
+				border-radius: 5rem 0 0 0 !important;
+			}
+		}
+
+		&:nth-of-type(2) {
+			&.selected {
+				background-color: $white;
+				border-radius: 0 5rem 0 0;
+			}
+			&.selected-wheel {
+				border-radius: 0 5rem 0 0;
+			}
+			&.selected-cards {
+				border-radius: 0 0 5rem 0;
+			}
+		}
+
+		&:nth-of-type(3) {
+			&.selected {
+				background-color: $white;
+				border-radius: 0 0 0 5rem;
+			}
+			&.selected-dice {
+				border-radius: 0 5rem 0 5rem !important;
+			}
+			&.selected-wheel {
+				border-radius: 0 0 0 5rem !important;
+			}
+		}
+
+		img {
+			height: 7rem;
+			margin: 0 auto;
+			align-self: center;
+			// width: 100%;
+		}
+	}
+}

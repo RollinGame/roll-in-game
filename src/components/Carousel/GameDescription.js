@@ -1,6 +1,6 @@
 import React from 'react';
-import PlayersIMG from '../images/player.svg';
-import StarIMG from '../images/star.svg';
+import PlayersIMG from '../../images/player.svg';
+import StarIMG from '../../images/star.svg';
 
 const GameDescription = ({game}) => {
 

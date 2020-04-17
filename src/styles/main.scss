@@ -2,10 +2,13 @@
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
+@import 'base/layout';
+
 @import 'components/carousel';
 @import 'components/gameDescription';
 @import 'components/button';
 @import 'components/arrow';
+@import 'components/lastgames';
 
 @import 'base/base';
 @import 'base/typography';

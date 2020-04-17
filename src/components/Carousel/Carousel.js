@@ -2,9 +2,9 @@ import React from 'react';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import Arrow from './Arrow';
-import SlideData from '../carousel-data/SlideData';
+import SlideData from '../../data/SlideData';
 import CarouselContent from './CarouselContent';
-import '../styles/components/_slider.css';
+import '../../styles/components/_slider.css';
 
 const Carousel = () => {
 
@@ -19,7 +19,7 @@ const Carousel = () => {
           <div
             game={game}
             key={index}>
-            <CarouselContent game={game} />
+            <CarouselContent game={game} index={index} />
           </div>
         ))}
         
