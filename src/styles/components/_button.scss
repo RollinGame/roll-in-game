@@ -1,10 +1,74 @@
 .btn {
-	border-radius: 1.8rem;
-	height: 4rem;
+	outline: none;
+
+	&:hover {
+		background: darken(#8dc42d, 1%);
+	}
+
+	&:active {
+		top: 0.2rem;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__dice {
+		display: inline-block;
+		position: relative;
+		text-decoration: none;
+		border: none;
+		padding: 0;
+		align-self: center;
+		font-weight: bold;
+		width: 13.3rem;
+		height: 13.3rem;
+		border-radius: 50%;
+	}
+
+	&__focus {
+		display: inline-block;
+		position: relative;
+		text-decoration: none;
+		background-image: linear-gradient(to right, #8dc42d -29%, #d2fa5f);
+		font-weight: bold;
+		width: 19rem;
+		height: 19rem;
+		border-radius: 50%;
+		border: solid 0.5rem #fff;
+
+		&:hover {
+			// border-style: dashed;
+		}
+
+		&--image {
+			height: 5.2rem;
+
+			img {
+				height: 5.2rem;
+				width: 4.4rem;
+			}
+		}
+
+		&--text {
+			width: 9.2rem;
+			height: 5.4rem;
+			font-family: 'Ubuntu';
+			font-size: 3rem;
+			font-weight: bold;
+			line-height: 0.9;
+			letter-spacing: 0.09rem;
+			text-align: center;
+			color: $peacock-blue;
+		}
+	}
 
 	&__play {
 		width: 17.7rem;
-		font-family: GothamPro;
+		font-family: 'Ubuntu';
 		text-align: left;
 		text-indent: 8%;
 		font-size: 1.7rem;
@@ -14,6 +78,7 @@
 		color: #0456a3;
 		position: relative;
 		background-image: linear-gradient(to right, #8dc42d -29%, #d2fa5f);
+		border-radius: 1.8rem;
 
 		&--arrow {
 			position: absolute;

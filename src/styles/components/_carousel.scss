@@ -3,6 +3,8 @@
 	position: relative;
 	background-size: cover;
 	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
 
 	@include respond(phone) {
 		background-position: center;
@@ -11,9 +13,34 @@
 		background-position: center;
 	}
 
-	.slide-content {
-		height: 70vh !important;
-		background-size: cover !important;
+	.carousel-buttons {
+		z-index: 100;
+		align-self: flex-end;
+		display: flex;
+		position: relative;
+		right: 14.4%;
+		bottom: -3%;
+
+		@include respond(big-desktop) {
+			right: 0;
+			bottom: 0%;
+			justify-self: center;
+		}
+
+		@include respond(tab-land) {
+			right: 0;
+			bottom: 0%;
+		}
+
+		@include respond(tab-port) {
+			// right: 5%;
+			bottom: 0%;
+		}
+
+		@include respond(phone) {
+			right: 16%;
+			bottom: -1%;
+		}
 	}
 }
 
