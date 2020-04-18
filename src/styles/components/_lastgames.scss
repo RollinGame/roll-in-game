@@ -1,21 +1,16 @@
-.section__container {
-	height: 100vh;
-	position: relative;
 
 	.last-games__wrapper {
-		height: 100vh;
+		height: 80vh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		@include respond(phone) {
+			flex-direction: column;
+		}
 	}
-}
 
-.last-games__info {
-	width: 50rem;
-	height: 45rem;
-}
 
-.last-games__container {
+.dashboard__container {
 	width: 80rem;
 	height: 45rem;
 	box-shadow: 0 1rem 8rem 0 rgba(0, 0, 0, 0.06);
@@ -24,108 +19,4 @@
 	display: flex;
 }
 
-.last-games__avatars {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 20%;
 
-	div {
-		flex: 1;
-		cursor: pointer;
-		width: 100%;
-		display: flex;
-		background-color: #f3f3f3;
-		transition: all 0.5s;
-		&:nth-of-type(1) {
-			&.selected {
-				background-color: $white;
-				border-radius: 5rem 0 0 0;
-			}
-			&.selected-dice {
-				border-radius: 5rem 0 5rem 0 !important;
-			}
-			&.selected-cards {
-				border-radius: 5rem 0 0 0 !important;
-			}
-		}
-
-		&:nth-of-type(2) {
-			&.selected {
-				background-color: $white;
-				border-radius: 0 5rem 0 0;
-			}
-			&.selected-wheel {
-				border-radius: 0 5rem 0 0;
-			}
-			&.selected-cards {
-				border-radius: 0 0 5rem 0;
-			}
-		}
-
-		&:nth-of-type(3) {
-			&.selected {
-				background-color: $white;
-				border-radius: 0 0 0 5rem;
-			}
-			&.selected-dice {
-				border-radius: 0 5rem 0 5rem !important;
-			}
-			&.selected-wheel {
-				border-radius: 0 0 0 5rem !important;
-			}
-		}
-
-		img {
-			height: 7rem;
-			margin: 0 auto;
-			align-self: center;
-		}
-	}
-}
-
-.dashboard {
-	width: 80%;
-	padding: 2.5rem 0 2.3rem 0;
-
-	&__list {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		padding-left: 0;
-		overflow-y: scroll;
-		max-height: 100%;
-
-		li {
-			list-style: none;
-			display: flex;
-			width: 100%;
-			text-align: center;
-			&:nth-of-type(n + 2) {
-				//selects all elements from the second to last
-				margin-top: 3.2rem;
-			}
-
-			div {
-				flex: 1;
-				font-family: GothamPro;
-				font-size: 1.2rem;
-				font-weight: bold;
-				line-height: 1.83;
-				letter-spacing: 0.036rem;
-				color: $peacock-blue;
-
-				&:nth-of-type(2) {
-					color: $icky-green;
-					img {
-						position: relative;
-						right: 0.5rem;
-					}
-					span {
-						vertical-align: super;
-					}
-				}
-			}
-		}
-	}
-}
