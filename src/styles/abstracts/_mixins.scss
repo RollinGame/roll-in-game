@@ -46,7 +46,7 @@ ORDER: Base + typography > general layout > page layout > components
 	background-image: url('../../images/jackpot.svg'); 
 	background-size: contain; 
 	background-repeat: no-repeat; 
-	width: 33%; 
+	width: 40%; // 33
 	height: 0; 
-	padding-top: percentage(351 / 614) / 3; 
+	padding-top: percentage(351 / 614) / 2.5; //3
 }
