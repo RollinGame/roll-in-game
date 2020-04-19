@@ -1,9 +1,10 @@
 
 	.last-games__wrapper {
-		height: 80vh;
+		height: 45rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin-top:8rem;
 		@include respond(phone) {
 			flex-direction: column;
 		}
