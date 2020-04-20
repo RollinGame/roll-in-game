@@ -3,6 +3,7 @@ import React from 'react'
 import Carousel from './components/Carousel/Carousel'
 import LastGamesBoard from './components//LastGames/LastGamesBoard'
 import DailyRaffle from './components/DailyRaffle/DailyRaffle'
+import Benefits from './components/Benefits/Benefits'
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Carousel />
       <LastGamesBoard />
       <DailyRaffle />
+      <Benefits />
     </div>
   )
 }
