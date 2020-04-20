@@ -12,9 +12,9 @@
 		width:50%;
 		position:absolute;
 		right:5%;
-		height: 42rem;
+		height: 35rem;
 		border-radius: 5rem;
-		bottom:-18%;
+		bottom:-13%;
 		padding-bottom:0;
 
 		@include respond(big-display) {
@@ -174,13 +174,18 @@
 	&__jackpot {
 		@include div-same-size-as-background-img();
 		position: relative;
-		top:-55%; // 55 64
+		top:-52%; // 55 64
 		right:-29%; // 35 29
 		transition:all 0.3s;
 
 
-		@include respond(tab-land) {
+		@include respond(big-display) {
 			top: -52%;
+			right: -30%;
+		}
+
+		@include respond(tab-land) {
+			top: -48%;
 			right: -27%;
 		}
 
@@ -217,7 +222,7 @@
 			span {
 				font-family: 'Ubuntu';
 				font-size: 3.7rem;
-				font-weight: normal;
+				font-weight: 500;
 				font-stretch: normal;
 				font-style: normal;
 				line-height: 1.11;
