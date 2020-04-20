@@ -1,17 +1,17 @@
-const LastGamesAvatarsData = [ 
-   {
+const LastGamesAvatarsData = [
+  {
     name: 'wheel',
-    image: 'wheel-avatar',
+    image: 'wheel-avatar'
   },
   {
     name: 'dice',
-    image:'dice-avatar',
+    image: 'dice-avatar'
   },
   {
-    name:'cards',
-    image:'wheel-avatar-copy',
+    name: 'cards',
+    image: 'wheel-avatar-copy'
   }
-];
+]
 
 const DashboardListData = [
   {
@@ -19,47 +19,56 @@ const DashboardListData = [
     playerWon: 'Player 1',
     winAmount: '+ 187 ADA',
     time: '25.03.20 14:23'
-  },{
+  },
+  {
     gameName: 'wheel',
     playerWon: 'Player 1',
     winAmount: '+ 187 ADA',
     time: '25.03.20 14:23'
-  },{
+  },
+  {
     gameName: 'wheel',
     playerWon: 'Player 1',
     winAmount: '+ 187 ADA',
     time: '25.03.20 14:23'
-  },{
+  },
+  {
     gameName: 'wheel',
     playerWon: 'Player 1',
     winAmount: '+ 187 ADA',
     time: '25.03.20 14:23'
-  },{
+  },
+  {
     gameName: 'wheel',
     playerWon: 'Player 1',
     winAmount: '+ 187 ADA',
     time: '25.03.20 14:23'
-  },{
+  },
+  {
     gameName: 'wheel',
     playerWon: 'Player 1',
     winAmount: '+ 187 ADA',
     time: '25.03.20 14:23'
-  },{
+  },
+  {
     gameName: 'wheel',
     playerWon: 'Player 1',
     winAmount: '+ 187 ADA',
     time: '25.03.20 14:23'
-  },{
+  },
+  {
     gameName: 'wheel',
     playerWon: 'Player 1',
     winAmount: '+ 187 ADA',
     time: '25.03.20 14:23'
-  },{
+  },
+  {
     gameName: 'wheel',
     playerWon: 'Player 1',
     winAmount: '+ 187 ADA',
     time: '25.03.20 14:23'
-  },{
+  },
+  {
     gameName: 'wheel',
     playerWon: 'Player 1',
     winAmount: '+ 187 ADA',
@@ -148,8 +157,70 @@ const DashboardListData = [
     playerWon: 'Player 3',
     winAmount: '+ 87 ADA',
     time: '25.03.20 11:52'
-  },
+  }
+]
 
-];
+const RaffleWinners = [
+  {
+    playerWon: 'Player 1',
+    winAmount: '1345 ADA',
+    time: '25.03.20 14:23'
+  },
+  {
+    playerWon: 'Player 1',
+    winAmount: '1345 ADA',
+    time: '25.03.20 14:23'
+  },
+  {
+    playerWon: 'Player 1',
+    winAmount: '1345 ADA',
+    time: '25.03.20 14:23'
+  },
+  {
+    playerWon: 'Player 1',
+    winAmount: '1345 ADA',
+    time: '25.03.20 14:23'
+  },
+  {
+    playerWon: 'Player 1',
+    winAmount: '1345 ADA',
+    time: '25.03.20 14:23'
+  },
+  {
+    playerWon: 'Player 1',
+    winAmount: '1345 ADA',
+    time: '25.03.20 14:23'
+  },
+  {
+    playerWon: 'Player 1',
+    winAmount: '1345 ADA',
+    time: '25.03.20 14:23'
+  },
+  {
+    playerWon: 'Player 1',
+    winAmount: '1345 ADA',
+    time: '25.03.20 14:23'
+  },
+  {
+    playerWon: 'Player 1',
+    winAmount: '1345 ADA',
+    time: '25.03.20 14:23'
+  },
+  {
+    playerWon: 'Player 1',
+    winAmount: '1345 ADA',
+    time: '25.03.20 14:23'
+  },
+  {
+    playerWon: 'Player 1',
+    winAmount: '1345 ADA',
+    time: '25.03.20 14:23'
+  },
+  {
+    playerWon: 'Player 1',
+    winAmount: '1345 ADA',
+    time: '25.03.20 14:23'
+  }
+]
 
-export { LastGamesAvatarsData, DashboardListData };
+export { LastGamesAvatarsData, DashboardListData, RaffleWinners }

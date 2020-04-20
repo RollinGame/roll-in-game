@@ -1,7 +1,7 @@
 .dashboard {
 	width: 80%;
 	padding: 2.5rem 0 2.3rem 0;
-
+	background-color: $white;
 	&__list {
 		width: 95%;
 		display: flex;
@@ -10,6 +10,7 @@
 		padding-left: 0;
 		overflow: auto;
 		max-height: 100%;
+		
 
 		&::-webkit-scrollbar {
 			width: 0.6rem;
