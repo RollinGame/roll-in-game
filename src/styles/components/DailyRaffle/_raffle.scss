@@ -16,6 +16,7 @@
 		border-radius: 5rem;
 		bottom:-13%;
 		padding-bottom:0;
+		box-shadow: 0 3px 50px 0 rgba(0, 0, 0, 0.16);
 
 		@include respond(big-display) {
 			bottom: -24%;
