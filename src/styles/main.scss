@@ -4,14 +4,15 @@
 
 @import 'base/layout';
 
-@import 'components/carousel';
-@import 'components/gameDescription';
-@import 'components/button';
-@import 'components/arrow';
-@import 'components/lastgames';
-@import 'components/dashboardList';
-@import 'components/lastGamesInfo';
-@import 'components/lastGamesAvatars';
+@import 'components/Carousel/carousel';
+@import 'components/Carousel/gameDescription';
+@import 'components/Carousel/button';
+@import 'components/Carousel/arrow';
+
+@import 'components/LastGames/lastgames';
+@import 'components/LastGames/dashboardList';
+@import 'components/LastGames/lastGamesInfo';
+@import 'components/LastGames/lastGamesAvatars';
 
 @import 'components/DailyRaffle/raffle';
 
