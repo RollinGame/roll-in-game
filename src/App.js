@@ -1,18 +1,21 @@
 import React from 'react'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
-import Carousel from './components/Carousel/Carousel'
-import LastGamesBoard from './components//LastGames/LastGamesBoard'
-import DailyRaffle from './components/DailyRaffle/DailyRaffle'
-import Benefits from './components/Benefits/Benefits'
+import LandingPage from './LandingPage'
+import RollinDice from './games/RollinDice/RollinDice'
 
 const App = () => {
   return (
-    <div>
-      <Carousel />
-      <LastGamesBoard />
-      <DailyRaffle />
-      <Benefits />
-    </div>
+    <Router>
+      <Switch>
+        <Route path='/' exact>
+          <LandingPage />
+        </Route>
+        <Route path='/dice'>
+          <RollinDice />
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 

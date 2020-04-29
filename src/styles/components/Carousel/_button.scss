@@ -1,13 +1,13 @@
 .btn {
 	outline: none;
 
-	&:hover {
-		background: darken(#8dc42d, 1%);
-	}
+	// &:hover {
+	// 	background: darken(#8dc42d, 1%);
+	// }
 
 	&:active {
-		top: 0.2rem;
-	}
+		transform: translateY(2px);				
+  }
 
 	&__container {
 		display: flex;
@@ -67,6 +67,8 @@
 	}
 
 	&__play {
+		text-decoration: none;
+		display:block;
 		width: 17.7rem;
 		font-family: 'Ubuntu';
 		text-align: left;
