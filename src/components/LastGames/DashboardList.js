@@ -9,7 +9,8 @@ const DashbaordList = ({ children, listData }) => {
         {listData.map(row => (
           <DashboardListItem
             player={row.playerWon}
-            amount={row.winAmount}
+            alias={row.alias}
+            amount={`${row.winAmount} ${row.currency}`}
             time={row.time}
             game={row.gameName}
           />

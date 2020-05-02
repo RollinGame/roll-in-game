@@ -2,3 +2,4 @@
 /yarn.lock
 /.DS_Store
 src/.DS_Store
+server/node_modules
