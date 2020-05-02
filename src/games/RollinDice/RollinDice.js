@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 import AliasScreen from './AliasScreen'
 import BetScreen from './BetScreen'
-import ProtectedRoute from './ProtectedRoute'
+import ProtectedRoute from '../shared/ProtectedRoute'
 
 const RollinDice = () => {
   const [alias, setAlias] = useState('')
@@ -15,6 +15,7 @@ const RollinDice = () => {
         <ProtectedRoute
           path='/dice/bet'
           alias={alias}
+          fallbackPath='/dice'
           component={BetScreen}
           betSize={betSize}
           setBetSize={setBetSize}
