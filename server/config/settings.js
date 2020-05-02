@@ -5,7 +5,7 @@ module.exports = {
             useNewUrlParser: true,
             useUnifiedTopology: true
         },
-        apiPort: 2323
+        apiPort: 2325
     },
     production: {
         dbConnectionString: '',
