@@ -1,9 +1,9 @@
 import React from 'react'
 
-const DashboardListItem = ({ player, amount, time, game }) => {
+const DashboardListItem = ({ player, alias, amount, time, game }) => {
   return (
-    <li>
-      <div>{player}</div>
+    <li>      
+      <div>{alias}</div>
       <div>
         {game && <img src={require(`../../images/twitter.svg`)} />}
         <span>{amount}</span>
