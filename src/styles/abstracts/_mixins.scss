@@ -39,14 +39,19 @@ ORDER: Base + typography > general layout > page layout > components
 			@content;
 		}
 	}
+
+	@if $breakpoint == very-big-desktop {
+		@media (min-width: 160em) {
+			@content;
+		}
+	}
 }
 
-
-@mixin div-same-size-as-background-img() { 
-	background-image: url('../../images/jackpot.svg'); 
-	background-size: contain; 
-	background-repeat: no-repeat; 
+@mixin div-same-size-as-background-img() {
+	background-image: url('../../images/jackpot.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
 	width: 40%; // 33
-	height: 0; 
+	height: 0;
 	padding-top: percentage(351 / 614) / 2.5; //3
 }
