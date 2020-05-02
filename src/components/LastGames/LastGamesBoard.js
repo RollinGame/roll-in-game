@@ -3,6 +3,7 @@ import { LastGamesAvatarsData, DashboardListData } from '../../data/LastGames'
 import LastGamesAvatar from './LastGamesAvatar'
 import DashboardList from './DashboardList'
 import LastGamesInfo from './LastGamesInfo'
+import axios from 'axios';
 
 const LastGamesBoard = () => {
   const [isActive, setIsActive] = useState('wheel')
@@ -11,12 +12,31 @@ const LastGamesBoard = () => {
   // Handle clicking of avatars (styling and data changes)
   const handleIsActive = avatarName => {
     setIsActive(avatarName)
-    setListData(DashboardListData.filter(data => data.gameName === avatarName))
+    // setListData(DashboardListData.filter(data => data.gameName === avatarName))
+    axios.get('http://localhost:2323/api/testlogitems')
+      .then(res => {
+        console.log(res.data.data);
+        console.log(avatarName);
+
+        setListData(res.data.data.filter(logItem => logItem.gameName === avatarName))
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }
 
   // Load the Wheel data on initial load of the page
   useEffect(() => {
-    setListData(DashboardListData.filter(data => data.gameName === isActive))
+//    setListData(DashboardListData.filter(data => data.gameName === isActive))
+    axios.get('http://localhost:2323/api/testlogitems')
+      .then(res => {
+        // console.log(res.data.data);
+
+        setListData(res.data.data.filter(logItem => logItem.gameName === isActive))
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }, [])
 
   return (
