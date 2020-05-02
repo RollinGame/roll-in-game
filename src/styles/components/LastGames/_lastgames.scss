@@ -1,23 +1,22 @@
-
-	.last-games__wrapper {
-		height: 45rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-top:8rem;
-		@include respond(phone) {
-			flex-direction: column;
-		}
+.last-games__wrapper {
+	height: 45rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 8rem;
+	@include respond(phone) {
+		flex-direction: column;
 	}
-
+}
 
 .dashboard__container {
-	max-width: 80rem;
+	width: 80rem;
+	@include respond(phone) {
+		width: 60rem;
+	}
 	height: 45rem;
 	box-shadow: 0 1rem 8rem 0 rgba(0, 0, 0, 0.06);
 	border-radius: 5rem;
 	background-color: $white;
 	display: flex;
 }
-
-

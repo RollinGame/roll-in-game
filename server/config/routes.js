@@ -1,25 +1,25 @@
-const controllers = require('../controller');
+const { getAllLogs, newLog } = require('../controller/logItemController');
+const { testGetAllLogs, testNewLog } = require('../controller/testLogIemController');
 
-module.exports = (app) => {
-    app.get('/', (req, res) => res.send('Hello World.'));
+module.exports = app => {
+	app.get('/', (req, res) => res.send('Hello World.'));
 
-    // Default API responce
-    app.get('/api', (req, res) => {
-        res.json({
-            status: 'API Its Working.',
-            message: 'Welcome to RollinGames API.'
-        });
-    });
+	// Default API responce
+	app.get('/api', (req, res) => {
+		res.json({
+			status: 'API is working.',
+			message: 'Welcome to RollinGames API.',
+		});
+	});
 
-    app.get('/api/logitems', controllers.logItemController.getAllLogs);
-    app.post('/api/logitems', controllers.logItemController.newLog);
+	app.get('/api/logitems', getAllLogs);
+	app.post('/api/logitems', newLog);
 
-    app.get('/api/testlogitems', controllers.testLogItemController.getAllLogs);
-    app.post('/api/testlogitems', controllers.testLogItemController.newLog);
+	app.get('/api/testlogitems', testGetAllLogs);
+	app.post('/api/testlogitems', testNewLog);
 
-    app.all('*', (req, res) => {
-        res.status(404);
-        res.send('Ups! Something went wrong! 404 Not Found!');
-        res.end();
-    });
-}
+	app.use((req, res, next) => {
+		const error = new Error('Could not find this route.');
+		throw error;
+	});
+};
