@@ -3,8 +3,8 @@ const getParsedDate = require('../utils/utils');
 
 const getAllLogs = async (req, res, next) => {
 	try {
-		const logItems = await LogItem.find({})
-			.limit(15)
+		const logItems = await LogItem.find({}) // We would need endpoints for each game as the limit here will apply to all logs. Also we would most likely never need combined logs.
+			.limit(50)
 			.sort('-timeStamp');
 
 		const parsedDateLogs= logItems.map(log => ({
