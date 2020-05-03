@@ -1,10 +1,10 @@
 import React from 'react';
-
+import { ReactComponent as Logo } from '../../images/logo_roll-in-game.svg';
 const SocialMedia = () => {
     return (
         <div class="social-media">
             <div class="rolling-logo">
-                <img src={require(`../../images/wood.svg`)} />
+                <Logo className='rolling-games-logo' />
             </div>
             <div class="social-links">
                 <div class="social-icon">

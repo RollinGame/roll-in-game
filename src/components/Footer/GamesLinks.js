@@ -1,4 +1,5 @@
 import React from 'react';
+import { ReactComponent as Logo } from '../../images/logo_roll-in-game.svg';
 
 const GamesLinks = () => {
     return (
@@ -8,7 +9,7 @@ const GamesLinks = () => {
                     <img src={require(`../../images/wheel-avatar.svg`)} />
                 </div>
                 <div class="game-text">
-                    <img src={require(`../../images/wood.svg`)} />
+                    <Logo className='rolling-games-logo' />
                 </div>
             </div>
             <div class="game-link">
@@ -16,7 +17,7 @@ const GamesLinks = () => {
                     <img src={require(`../../images/dice-avatar.svg`)} />
                 </div>
                 <div class="game-text">
-                    <img src={require(`../../images/wood.svg`)} />
+                    <Logo className='rolling-games-logo' />
                 </div>
             </div>
             <div class="game-link">
@@ -24,7 +25,7 @@ const GamesLinks = () => {
                     <img src={require(`../../images/dice-avatar.svg`)} />
                 </div>
                 <div class="game-text">
-                    <img src={require(`../../images/wood.svg`)} />
+                    <Logo className='rolling-games-logo' />
                 </div>
             </div>
         </div>

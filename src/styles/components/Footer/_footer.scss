@@ -1,12 +1,28 @@
 .footer {
     display:flex;
     justify-content: space-between;
+    margin-top: 4.2rem;
+    padding: 0 7.5rem;
+    .rolling-games-logo path{
+        fill: #0456a1;
+        //stroke: #0456a1
+    }
 
     .social-media{
 
+        .rolling-logo {
+            margin-bottom: 4.5rem;
+        }
+
         .social-links{
             display:flex;
-            justify-content: space-between;
+            margin-bottom: 4.5rem;
+
+            .social-icon {
+                height: 3rem;
+                width: 3rem;
+                margin-right: 2.6rem;
+            }
         }
 
         p{
