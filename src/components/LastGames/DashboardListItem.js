@@ -1,12 +1,12 @@
 import React from 'react';
 
-const DashboardListItem = ({ player, alias, amount, time, game }) => {
+const DashboardListItem = ({ alias, payout, time, game }) => {
 	return (
 		<li>
-			<div>{alias || player}</div>
+			<div>{alias}</div>
 			<div>
 				{game && <img src={require(`../../images/twitter.svg`)} />}
-				<span>{amount}</span>
+				<span>{payout}</span>
 			</div>
 			<div>{time}</div>
 		</li>

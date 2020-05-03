@@ -8,11 +8,11 @@ const DashbaordList = ({ children, listData }) => {
       <ul class='dashboard__list'>
         {listData.map(row => (
           <DashboardListItem
-            player={row.playerWon}
+            // player={row.playerWon}
             alias={row.alias}
-            amount={`${row.winAmount} ${row.currency}`}
-            time={row.time}
-            game={row.gameName}
+            payout={`${row.payout} ${row.currency}`}
+            time={row.timeStamp}
+            game={row.game}
           />
         ))}
       </ul>
