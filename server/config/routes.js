@@ -2,7 +2,7 @@ const { getAllLogs, newLog } = require('../controller/logItemController');
 const { testGetAllLogs, testNewLog } = require('../controller/testLogIemController');
 
 module.exports = app => {
-	app.get('/', (req, res) => res.send('Hello World.'));
+	app.get('/', (req, res) => res.send('Starting point.'));
 
 	// Default API responce
 	app.get('/api', (req, res) => {

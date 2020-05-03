@@ -13,11 +13,8 @@ const LastGamesBoard = () => {
   const handleIsActive = avatarName => {
     setIsActive(avatarName)
     // setListData(DashboardListData.filter(data => data.gameName === avatarName))
-    axios.get('http://localhost:2323/api/testlogitems')
+    axios.get('http://localhost:2325/api/testlogitems')
       .then(res => {
-        console.log(res.data.data);
-        console.log(avatarName);
-
         setListData(res.data.data.filter(logItem => logItem.gameName === avatarName))
       })
       .catch(err => {
@@ -28,7 +25,7 @@ const LastGamesBoard = () => {
   // Load the Wheel data on initial load of the page
   useEffect(() => {
 //    setListData(DashboardListData.filter(data => data.gameName === isActive))
-    axios.get('http://localhost:2323/api/testlogitems')
+    axios.get('http://localhost:2325/api/testlogitems')
       .then(res => {
         // console.log(res.data.data);
 
