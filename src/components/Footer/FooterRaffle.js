@@ -1,7 +1,5 @@
 import React from 'react';
 
-//for the jackpot logo put the image in the scss background
-
 const FooterRaffle = () => {
     return (
         <div class="footer-raffle">
