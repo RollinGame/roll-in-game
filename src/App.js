@@ -4,6 +4,7 @@ import Carousel from './components/Carousel/Carousel'
 import LastGamesBoard from './components//LastGames/LastGamesBoard'
 import DailyRaffle from './components/DailyRaffle/DailyRaffle'
 import Benefits from './components/Benefits/Benefits'
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <LastGamesBoard />
       <DailyRaffle />
       <Benefits />
+      <Footer />
     </div>
   )
 }

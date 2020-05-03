@@ -1,0 +1,49 @@
+.footer {
+    display:flex;
+    justify-content: space-between;
+
+    .social-media{
+
+        .social-links{
+            display:flex;
+            justify-content: space-between;
+        }
+
+        p{
+            width: 246px;
+            height: 56px;
+            font-family: GothamPro;
+            font-size: 14px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.14;
+            letter-spacing: 0.42px;
+            text-align: left;
+            color: #767676;
+        }
+    }
+
+    .quick-links{
+        .quick-link {
+            width: 76px;
+            height: 28px;
+            font-family: GothamPro;
+            font-size: 14px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.14;
+            letter-spacing: 0.28px;
+            text-align: left;
+            color: var(--camo-green);
+        }
+    }
+
+
+    .game-link {
+        display:flex;
+        justify-content: space-between;
+    }
+}
+
