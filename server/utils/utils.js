@@ -9,8 +9,8 @@ const getParsedDate = (strDate) => {
     if (dd < 10) {
         dd = `0${dd}`
     }
-    if (m < 10) {
-        m = `0${m}`
+    if (mm < 10) {
+        mm = `0${m}`
     }
     date = `${dd}.${m}.${yyyy} ${hh}:${mm}`
     return date.toString()

@@ -11,6 +11,11 @@ const logSchema = new Schema({
     timeStamp: { type: Schema.Types.Date, default: Date.now() }
 });
 
+logSchema.statics.getLogsByGame = function (game, limit) {
+    return this.model('LogItem').find({ game: game }).limit(limit).sort('-timeStamp')
+
+}
+
 const LogItem = model('LogItem', logSchema);
 
 module.exports = LogItem;

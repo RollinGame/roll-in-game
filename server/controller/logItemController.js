@@ -6,8 +6,8 @@ const getAllLogs = async (req, res, next) => {
 		const logItems = await LogItem.find({}) // We would need endpoints for each game as the limit here will apply to all logs. Also we would most likely never need combined logs.
 			.limit(50)
 			.sort('-timeStamp');
-
-		const parsedDateLogs= logItems.map(log => ({
+			
+		const parsedDateLogs = logItems.map(log => ({
 			game: log.game,
 			outcome: log.outcome,
 			walletId: log.walletId,
