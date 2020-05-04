@@ -3,7 +3,15 @@ import { LastGamesAvatarsData } from '../../data/LastGames';
 import LastGamesAvatar from './LastGamesAvatar';
 import DashboardList from './DashboardList';
 import LastGamesInfo from './LastGamesInfo';
-import axios from 'axios';
+import io from 'socket.io-client';
+
+const socket = io('http://localhost:2325');
+
+const updateLogs = cb => {
+	socket.on('newLogAdded', log => {
+		cb(log);
+	});
+};
 
 const LastGamesBoard = () => {
 	const [isActive, setIsActive] = useState('wheel');
@@ -14,20 +22,25 @@ const LastGamesBoard = () => {
 	const handleIsActive = avatarName => {
 		setIsActive(avatarName);
 		setListData(allLogs.filter(logItem => logItem.game === avatarName));
-	};
+  };
+  
+  //update the listData each time a new log is added.
+  useEffect(() => {
+    setListData(allLogs.filter(logItem => logItem.game === isActive))
+  }, [allLogs])
 
 	// Load the Wheel data on initial load of the page
 	useEffect(() => {
-		//    setListData(DashboardListData.filter(data => data.gameName === isActive))
-		axios
-			.get('http://localhost:2325/api/logitems')
-			.then(res => {
-				setListData(res.data.data.filter(logItem => logItem.game === isActive));
-				setAllLogs(res.data.data);
-			})
-			.catch(err => {
-				console.log(err);
-			});
+		socket.on('initialLogs', initialLogs => {
+			console.log('initial logs received from server', initialLogs);
+			setAllLogs(initialLogs);
+			setListData(initialLogs.filter(logItem => logItem.game === isActive));
+		});
+
+    // Register event for real-time dashboard updating.
+		updateLogs(log => {
+			setAllLogs(prevLogs => [log, ...prevLogs ]);
+		});
 	}, []);
 
 	return (
