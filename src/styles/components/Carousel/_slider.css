@@ -1,0 +1,8 @@
+.slider__wrapper {
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+	background-size: cover;
+}
+
+/* Temporary solution because there seems to be a problem with applying className to react components when using scss */

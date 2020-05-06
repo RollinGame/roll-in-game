@@ -1,0 +1,64 @@
+.dashboard {
+	width: 80%;
+	padding: 2.5rem 0 2.3rem 0;
+	background-color: $white;
+	&__list {
+		width: 95%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding-left: 0;
+		overflow: auto;
+		max-height: 100%;
+		
+
+		&::-webkit-scrollbar {
+			width: 0.6rem;
+		}
+
+		/* Track */
+		&::-webkit-scrollbar-track {
+			background-color: #00325f;
+			border-radius: 0.4rem;
+		}
+
+		/* Handle */
+		&::-webkit-scrollbar-thumb {
+			background: $azure;
+			border-radius: 0.4rem;
+		}
+
+		li {
+			list-style: none;
+			display: flex;
+			width: 100%;
+			text-align: center;
+			transition: all 1s;
+			&:nth-of-type(n + 2) {
+				//selects all elements from the second to last
+				margin-top: 3.2rem;
+			}
+
+			div {
+				flex: 1;
+				font-family: 'Ubuntu';
+				font-size: 1.2rem;
+				font-weight: bold;
+				line-height: 1.83;
+				letter-spacing: 0.036rem;
+				color: $peacock-blue;
+
+				&:nth-of-type(2) {
+					color: $icky-green;
+					img {
+						position: relative;
+						right: 0.5rem;
+					}
+					span {
+						vertical-align: super;
+					}
+				}
+			}
+		}
+	}
+}

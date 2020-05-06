@@ -2,6 +2,24 @@
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
+@import 'base/layout';
+
+@import 'components/Carousel/carousel';
+@import 'components/Carousel/gameDescription';
+@import 'components/Carousel/button';
+@import 'components/Carousel/arrow';
+
+@import 'components/LastGames/lastgames';
+@import 'components/LastGames/dashboardList';
+@import 'components/LastGames/lastGamesInfo';
+@import 'components/LastGames/lastGamesAvatars';
+
+@import 'components/DailyRaffle/raffle';
+
+@import 'components/Benefits/benefits';
+
+@import 'components/RollinDice/preGame';
+
 @import 'base/base';
 @import 'base/typography';
 @import 'base/utilities';
