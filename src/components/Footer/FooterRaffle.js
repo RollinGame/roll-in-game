@@ -5,7 +5,7 @@ const FooterRaffle = () => {
         <div class="footer-raffle">
             <h2>Check your luck today</h2>
             <div class="raffle-logo">
-                <p> Daily Ruffle </p>
+                <p> Daily Raffle </p>
             </div>
 
             <div class='raffle__cta'>

@@ -9,7 +9,7 @@
     }
 
     .social-media{
-
+        height: 26rem;
         .rolling-logo {
             margin-bottom: 4.5rem;
         }
@@ -26,40 +26,107 @@
         }
 
         p{
-            width: 246px;
-            height: 56px;
-            font-family: GothamPro;
-            font-size: 14px;
+            width: 25rem;
+            height: 6rem;
+            font-family: Ubuntu;
+            font-size: 1.5rem;
             font-weight: 300;
             font-stretch: normal;
             font-style: normal;
             line-height: 1.14;
-            letter-spacing: 0.42px;
+            letter-spacing: 0.04rem;
             text-align: left;
             color: #767676;
         }
     }
-
-    .quick-links{
-        .quick-link {
-            width: 76px;
-            height: 28px;
-            font-family: GothamPro;
-            font-size: 14px;
-            font-weight: 500;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.14;
-            letter-spacing: 0.28px;
-            text-align: left;
-            color: var(--camo-green);
+    
+    .quick-links-container{
+        ul{
+            list-style-type: none;
+            li {
+                //width: 7.6rem;
+                height: 2.8rem;
+                font-family: Ubuntu;
+                font-size: 1.4rem;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.14;
+                letter-spacing: 0.028rem;
+                text-align: left;
+                color: $camo-green;
+                margin-bottom: 3.5rem;
+            }
         }
     }
-
 
     .game-link {
         display:flex;
         justify-content: space-between;
     }
+
+
+
+    .raffle-logo {
+        width: 37rem;
+        height: 14rem;;
+        background-image: url('../../../images/raffle.png');
+        background-size: contain; 
+        background-repeat: no-repeat; 
+        p{
+            position: relative;
+            top:+42%; // 55 64
+            right:-30.5%;
+
+            width: 162px;
+            height: 23px;
+            font-family: GothamPro;
+            font-size: 26px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.08;
+            letter-spacing: 0.78px;
+            text-align: left;
+            color:$jungle-green;
+        }
+    }
+    
+
+    .footer-raffle {
+        h2{
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            width: 28.4rem;
+            height: 1.8rem;
+            font-family: Ubuntu;
+            font-size: 2rem;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.1;
+            letter-spacing: 0.06rem;
+            color: $camo-green;
+        }
+        .raffle__cta{
+            margin-left: 11rem;
+            button{
+                width: 14.1rem;
+                height: 3.1rem;
+                
+                .raffle__cta--betsize{
+                    width: 1rem;
+                }
+            }
+         
+        }
+    }
+
+    .game-links {
+        margin-top: 0.6rem;
+    }
+
+
 }
 
