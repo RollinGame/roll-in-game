@@ -6,7 +6,7 @@ require('./config/express')(app);
 require('./config/routes')(app);
 const Logs = require('./model/LogItem');
 const getParsedDate = require('./utils/utils');
-const { emitInitialLogs, emitNewLog } = require('./sockets/dashboardLogs');
+const { emitInitialLogs } = require('./sockets/dashboardLogs');
 
 // Set server listen port
 const expressServer = app.listen(settings.apiPort);
@@ -22,6 +22,6 @@ const logsEventEmitter = Logs.watch();
 logsEventEmitter.on('change', change => {
 	io.emit('newLogAdded', {
 		...change.fullDocument,
-		timeStamp: getParsedDate(String(change.fullDocument.timeStamp)),
+		timeStamp: getParsedDate((change.fullDocument.timeStamp)),
 	});
 });

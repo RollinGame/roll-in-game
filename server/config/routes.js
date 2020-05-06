@@ -14,8 +14,9 @@ module.exports = app => {
 	app.get('/api/logitems', getAllLogs);
 	app.post('/api/logitems', newLog);
 
-	app.use((req, res, next) => {
-		const error = new Error('Could not find this route.');
-		throw error;
-	});
+	app.all('*', (req, res) => {
+        res.status(404);
+        res.send('Could not find this route.');
+        res.end();
+    });
 };
