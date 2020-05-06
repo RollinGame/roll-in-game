@@ -4,12 +4,24 @@ const settings = require('./config/settings')[env];
 require('./config/database')(settings);
 require('./config/express')(app);
 require('./config/routes')(app);
-const logs = require('./model/LogItem');
+const Logs = require('./model/LogItem');
+const getParsedDate = require('./utils/utils');
+const { emitInitialLogs } = require('./sockets/dashboardLogs');
 
+// Set server listen port
 const expressServer = app.listen(settings.apiPort);
 console.log(`Server listening on port ${settings.apiPort}...`);
 
+// Set the sockets to listen to the express server port
+const socketio = require('socket.io');
+const io = socketio(expressServer);
 
-const logsEventEmitter = logs.watch();
+io.on('connection', emitInitialLogs);
 
-logsEventEmitter.on('change', change => console.log(change.fullDocument));
+const logsEventEmitter = Logs.watch();
+logsEventEmitter.on('change', change => {
+	io.emit('newLogAdded', {
+		...change.fullDocument,
+		timeStamp: getParsedDate((change.fullDocument.timeStamp)),
+	});
+});
