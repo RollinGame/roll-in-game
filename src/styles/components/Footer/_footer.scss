@@ -44,7 +44,7 @@
         ul{
             list-style-type: none;
             li {
-                //width: 7.6rem;
+                width: 7.6rem;
                 height: 2.8rem;
                 font-family: Ubuntu;
                 font-size: 1.4rem;
@@ -75,18 +75,18 @@
         background-repeat: no-repeat; 
         p{
             position: relative;
-            top:+42%; // 55 64
+            top:+45%;
             right:-30.5%;
 
-            width: 162px;
-            height: 23px;
-            font-family: GothamPro;
+            width: 16.2rem;
+            height: 2.3rem;
+            font-family: Ubuntu;
             font-size: 26px;
             font-weight: bold;
             font-stretch: normal;
             font-style: normal;
             line-height: 1.08;
-            letter-spacing: 0.78px;
+            letter-spacing: 0.078rem;
             text-align: left;
             color:$jungle-green;
         }
@@ -112,11 +112,15 @@
         .raffle__cta{
             margin-left: 11rem;
             button{
-                width: 14.1rem;
+                width: 17.1rem;
                 height: 3.1rem;
-                
+                font-size: 1.4rem;
+                text-align: left;
+
                 .raffle__cta--betsize{
-                    width: 1rem;
+                    width: 5rem;
+                    text-align: left;
+                    font-size: 1.4rem;
                 }
             }
          
@@ -125,6 +129,15 @@
 
     .game-links {
         margin-top: 0.6rem;
+    }
+
+    .game-link{
+        margin-bottom: 1.96rem;
+    }
+
+    .game-text {
+        margin-top: 1rem;
+        margin-left:1.3rem
     }
 
 

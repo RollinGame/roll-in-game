@@ -12,7 +12,7 @@ const FooterRaffle = () => {
                 <button>
                     Bet Now
                 <span>
-                        <div class='raffle__cta--betsize'>200 ADA</div>
+                        <div class='raffle__cta--betsize'>2 ADA</div>
                     </span>
                 </button>
             </div>
