@@ -1,16 +1,12 @@
 import React from 'react';
-import QuickLinks from './QuickLinks';
-import SocialMedia from './SocialMedia';
-import GamesLinks from './GamesLinks';
-import FooterRaffle from './FooterRaffle';
+import MainContent from './MainContent';
+import AllRights from './AllRights';
 
 const Footer = () => {
     return (
         <div class="footer">
-            <SocialMedia />
-            <QuickLinks />
-            <GamesLinks />
-            <FooterRaffle />
+            <MainContent />
+            <AllRights />
         </div>
     )
 }
